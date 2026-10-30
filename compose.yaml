@@ -1,0 +1,23 @@
+services:
+  c1:
+    container_name: c1
+    image: alpine/curl
+    command: ["sleep", "36000"]
+    networks:
+      - my-network
+  c2:
+    container_name: c2
+    image: alpine/curl
+    command: ["sleep", "36000"]
+    networks:
+      - my-network
+  c3:
+    container_name: c3
+    image: alpine/curl
+    command: ["sleep", "36000"]
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge  
